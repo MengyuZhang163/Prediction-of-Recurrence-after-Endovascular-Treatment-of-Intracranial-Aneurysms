@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 from joblib import load
 import os
+import xgboost as xgb
 
 # ==========================================
 # 1. 配置与模型加载
@@ -201,3 +202,4 @@ if st.button("🚀 开始预测 (Predict)", type="primary"):
     else:
 
         st.error("模型未加载，无法预测。")
+
