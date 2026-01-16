@@ -177,18 +177,20 @@ if st.button("🚀 Predict", type="primary"):
 
             prediction_class = 1 if prob >= best_threshold else 0
 
-            # Result Display Section
+           # Result Display Section
             col1, col2 = st.columns(2)
 
             with col1:
+                # 显示预测概率
                 st.metric(label="Probability of Recurrence", value=f"{prob:.2%}")
 
             with col2:
+                
                 if prediction_class == 1:
-                    st.error(f"⚠️ High Risk \n(> {best_threshold})")
+                    st.error(f"⚠️ High Risk \n(> {best_threshold:.0%})")
                 else:
-                    st.success(f"✅ Low Risk \n(< {best_threshold})")
-
+                    st.success(f"✅ Low Risk \n(< {best_threshold:.0%})")
+                    
             # Progress Bar Visualization
             st.progress(prob, text="Risk Index")
 
@@ -201,3 +203,4 @@ if st.button("🚀 Predict", type="primary"):
             st.write("Please check if the input data format matches the training data.")
     else:
         st.error("Model not loaded. Cannot predict.")
+
