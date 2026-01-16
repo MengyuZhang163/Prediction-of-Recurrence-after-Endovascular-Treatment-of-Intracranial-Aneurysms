@@ -14,7 +14,7 @@ st.set_page_config(
 )
 
 # --- 请修改模型路径 ---
-MODEL_PATH = 'C:/Users/11325/Desktop/LSS/特征筛选/XGB/9/XGB.pkl'
+MODEL_PATH = 'XGB.pkl'
 
 
 @st.cache_resource
@@ -199,4 +199,5 @@ if st.button("🚀 开始预测 (Predict)", type="primary"):
             st.error(f"预测过程中发生错误: {e}")
             st.write("请检查输入数据的格式是否与训练数据一致。")
     else:
+
         st.error("模型未加载，无法预测。")
