@@ -117,13 +117,13 @@ input_technique = st.sidebar.selectbox(
 # Adjust min_value and max_value based on your training data statistics
 input_width = st.sidebar.number_input(
     "Aneurysm Width (mm)",
-    min_value=0.0, max_value=50.0, value=5.0, step=0.1
+    min_value=0.0, max_value=50.0, value=11.9, step=0.1
 )
 
 # 7. Neck (Numerical)
 input_neck = st.sidebar.number_input(
     "Aneurysm Neck (mm)",
-    min_value=0.0, max_value=30.0, value=3.0, step=0.1
+    min_value=0.0, max_value=30.0, value=11.9, step=0.1
 )
 
 # 8. AngioAndTreatment
@@ -203,4 +203,5 @@ if st.button("🚀 Predict", type="primary"):
             st.write("Please check if the input data format matches the training data.")
     else:
         st.error("Model not loaded. Cannot predict.")
+
 
