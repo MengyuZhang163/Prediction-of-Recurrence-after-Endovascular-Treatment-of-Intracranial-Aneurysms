@@ -169,7 +169,7 @@ if st.button("🚀 Predict", type="primary"):
     if model:
         try:
             # Predict Probability
-            prob = model.predict_proba(df_input)[:, 1][0]
+            prob = float(model.predict_proba(df_input)[:, 1][0])
 
             # Set Threshold (Use the best_threshold calculated from your validation set)
             # You need to change this value to your actual best_threshold
